@@ -1,4 +1,4 @@
-Query with joins
+Subqueries with joins
 
 SELECT AVG (total_amount_paid) AS answer
 FROM
