@@ -1,0 +1,26 @@
+This is basic query to find descriptive statistics.
+
+SELECT
+MODE () WITHIN GROUP (ORDER BY film_id) AS id_mode,
+MODE () WITHIN GROUP (ORDER BY language_id) AS language_mode,
+MODE () WITHIN GROUP (ORDER BY title) AS title_mode,
+MODE () WITHIN GROUP (ORDER BY description) AS desc_mode,
+MODE () WITHIN GROUP (ORDER BY rating) AS rating_mode,
+MODE () WITHIN GROUP (ORDER BY special_features) AS spec_mode,
+MODE () WITHIN GROUP (ORDER BY fulltext) AS fulltext_mode,
+MIN (release_year) AS min_release,
+MAX (release_year) AS max_release,
+AVG (release_year) AS avg_release,
+MIN (rental_duration) AS min_rental_duration,
+MAX (rental_duration) AS max_rental_duration,
+AVG (rental_duration) AS avg_rental_duration,
+MIN (rental_rate) AS min_rental_rate,
+MAX (rental_rate) AS max_rental_rate,
+AVG (rental_rate) AS avg_rental_rate,
+MIN (length) AS min_length,
+MAX (length) AS max_length,
+AVG (length) AS avg_length,
+MIN (replacement_cost) AS min_replacement,
+MAX (replacement_cost) AS max_replacement,
+AVG (replacement_cost) AS avg_replacement
+FROM film;
